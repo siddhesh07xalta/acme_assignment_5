@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryScreenData ContentHash="MjYaKYx2s0G4rD4CQKb_SA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryScreenData ContentHash="xsHZPgrU00CS9K8naEcKUg" Reference="HFJFrCTOQka7zKhle0Z_YQ/EhFdMdPXAEiiT-gXNSfiHQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryScreenData.Data>
-    <TargetApp x:Key="TargetApp" Area="0, 0, 698, 1005" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAELSURBVDhPpZMBDcJADEWnAANgAAxgAOxgAASAATAABkAAGAADmOG/7v6lLLeEhJ+85Na0f21v6xpaiq24i3fhKg5iJkY1ERS+BAUPMS1wdoycpvwWjFxs0dVTENsJcsmrwtXOa3Hpj186C4wQL6qdMBdzEtgIEoFzhhhv5kwX1IQhbuBEdpCfDUWM4eeTiC5wnXMowuBrviJiGFhebrSSNXzOaub+bcAHkz+QX0dYCMaP5RyFl4OBbyTDYvMSvfy4ClpxEa5j1+g4udTUj40uwk3CkMShiK36YxjEFVrMx5sJ4soY/uoQO+LKyNuLmL0lOsk/DoUuJub9tJZcRQeMcxPMCRhQmLuSuu4DxhFTUDOzJRUAAAAASUVORK5CYII=" Selector="&lt;html app='msedge.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;" Url="https://acme-test.uipath.com/work-items/update/105620931" Version="V2">
-      <imageRef attrName="InformativeScreenshot" originalValue="260db726ac29b61845eee124f2996aa6.jpg" xmlns="">0LEtUsW5kEEeouDGU88HEIw</imageRef>
+    <TargetApp x:Key="TargetApp" Area="0, 0, 698, 1005" BrowserType="Edge" ContentHash="MjYaKYx2s0G4rD4CQKb_SA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAELSURBVDhPpZMBDcJADEWnAANgAAxgAOxgAASAATAABkAAGAADmOG/7v6lLLeEhJ+85Na0f21v6xpaiq24i3fhKg5iJkY1ERS+BAUPMS1wdoycpvwWjFxs0dVTENsJcsmrwtXOa3Hpj186C4wQL6qdMBdzEtgIEoFzhhhv5kwX1IQhbuBEdpCfDUWM4eeTiC5wnXMowuBrviJiGFhebrSSNXzOaub+bcAHkz+QX0dYCMaP5RyFl4OBbyTDYvMSvfy4ClpxEa5j1+g4udTUj40uwk3CkMShiK36YxjEFVrMx5sJ4soY/uoQO+LKyNuLmL0lOsk/DoUuJub9tJZcRQeMcxPMCRhQmLuSuu4DxhFTUDOzJRUAAAAASUVORK5CYII=" Reference="HFJFrCTOQka7zKhle0Z_YQ/EhFdMdPXAEiiT-gXNSfiHQ" Selector="&lt;html app='msedge.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;" Url="[&quot;https://acme-test.uipath.com/work-items/update/&quot;+wwid.ToString]" Version="V2">
+      <imageRef attrName="InformativeScreenshot" originalValue="260db726ac29b61845eee124f2996aa6.jpg" xmlns="">0oF3YJsVs5Uq3wg_msoyHhg</imageRef>
     </TargetApp>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData Name="wwid" />
+    </scg:List>
   </ObjectRepositoryScreenData.Data>
 </ObjectRepositoryScreenData>
