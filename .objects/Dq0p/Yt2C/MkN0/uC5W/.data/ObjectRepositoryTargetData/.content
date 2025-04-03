@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="uLk26Wba90mCLQs9mHBO_w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="codebeautify.org/sha1-hash-generator" CVScreenId="95d8c6a5-b3ea-4230-9232-09e50162d94b" CvElementArea="659, 778, 222, 80" CvTextArea="726, 806, 124, 27" CvTextArgument="Generate" CvType="Button" DesignTimeRectangle="729, 795, 120, 45" DesignTimeScaleFactor="1.5" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Generate' parentid='defaultAction' tag='SPAN' type='' class='' check:innerText='Generate' /&gt;" Guid="ace5e4d9-48b1-4092-8089-189ad6aee8fd" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SHA-1 Hash Generator Online Tool' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="95d8c6a5-b3ea-4230-9232-09e50162d94b" CvElementArea="659, 778, 222, 80" CvTextArea="726, 806, 124, 27" CvTextArgument="Generate" CvType="Button" DesignTimeRectangle="662, 780, 218, 75" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='defaultAction' tag='BUTTON' type='' class='button is-medium is-info mr-4' aaname='  Generate ' check:innerText='Generate' /&gt;" Guid="d1cd7b7e-6341-4405-bc9a-9d6045e3a7df" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="0d95353119edbfc51f0751445b76d98a.png" xmlns="">0Vii-z9KUTE6-BJlXgc1UHw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

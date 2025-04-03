@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="0iVxEse6-0Oi0V25I2U9uw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="acme-test.uipath.com/work-items/update/105620931" CVScreenId="3d2e9caf-e8b2-4b26-ba6e-e84ef6831cf9" CvElementArea="1187, 205, 96, 46" CvTextArea="1218, 218, 28, 18" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="1187, 204, 96, 48" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' automationid='' check:fulltext='OK' /&gt;" Guid="aeaeedca-ece0-4194-8725-cfdc7133289d" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Work - Microsoft​ Edge' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="3d2e9caf-e8b2-4b26-ba6e-e84ef6831cf9" CvTextArea="656, 116, 265, 24" CvTextArgument="acme-test.uipath.com says" CvType="Text" DesignTimeRectangle="656, 116, 265, 24" ElementType="Text" Guid="a680f334-c4e0-4ed7-bd34-11ffff92f468" SearchSteps="CV" TargetType="ComputerVisionBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="c4086588a0027db577d562bb4ed3cdcf.png" xmlns="">0NRdP0rYmBUCKvtARaf1nBA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="_k_Lhh-TYkeBRkrXYn2RKQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="codebeautify.org/sha1-hash-generator" CVScreenId="34fc09aa-a472-41b9-9dd4-7c0e85823dcf" CvElementArea="521, 605, 880, 283" CvType="InputBox" DesignTimeRectangle="521, 607, 877, 288" DesignTimeScaleFactor="1.5" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='inputTextArea' tag='TEXTAREA' type='' class='textarea is-large is-primary' placeholder='Enter Text to Generate SHA1 Hash' aaname='' /&gt;" Guid="ed7bb12a-0ee7-415b-9cf7-98bb3f9faee9" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SHA-1 Hash Generator Online Tool' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="34fc09aa-a472-41b9-9dd4-7c0e85823dcf" CvTextArea="519, 534, 315, 22" CvTextArgument="Enter the plain or Cipher Text:" CvType="Text" DesignTimeRectangle="521, 527, 420, 36" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' class='' aaname='Enter the plain or Cipher Text:' check:innerText='Enter the plain or Cipher Text:' /&gt;" Guid="4525febd-762d-4101-9eb3-834792c2de68" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="075da35c1ed9b5a8bd3e1edd80f1d6ba.png" xmlns="">0SWlRMvIwUkyammxYmcsECw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
