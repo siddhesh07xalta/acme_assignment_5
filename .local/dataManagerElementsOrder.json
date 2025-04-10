@@ -12,15 +12,37 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "client_country&Sequence_1",
-        "sha_code&Sequence_1",
-        "variable1&Sequence_1",
-        "client_id&Sequence_1",
-        "dt_filtered_data&Sequence_1",
         "username&Sequence_1",
         "password&Sequence_1",
-        "dt_extracted_data&Sequence_1"
+        "dt_extracted_data&Sequence_1",
+        "client_id&Sequence_1",
+        "sha_code&Sequence_1",
+        "client_country&Sequence_1",
+        "wwid&Sequence_1",
+        "dt_extraccted&Sequence_1",
+        "dt_filtered&Sequence_1",
+        "variable1&Sequence_66",
+        "dt_extraccted&Sequence_66",
+        "client_name&Sequence_68"
       ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "temp.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "LogOut&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "gfas.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

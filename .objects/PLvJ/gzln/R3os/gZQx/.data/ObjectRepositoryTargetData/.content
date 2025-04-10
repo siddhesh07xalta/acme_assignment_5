@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="kz6_JvfZmky3nXhedV579g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="acme-test.uipath.com/work-items/105620931" CVScreenId="a220765f-048d-4d97-b43e-5571e8389ebe" CvTextArea="389, 771, 151, 24" CvType="AnyWordGroup" DesignTimeRectangle="389, 772, 151, 22" DesignTimeScaleFactor="1.5" ElementType="Text" Guid="9ba9f75a-21ee-4fab-a0f4-8a681ec8d535" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="a220765f-048d-4d97-b43e-5571e8389ebe" CvTextArea="254, 771, 128, 20" CvTextArgument="Client Name:" CvType="Text" DesignTimeRectangle="256, 770, 128, 23" FuzzySelectorArgument="&lt;webctrl type='' tag='B' class='' aaname='Client Name:' check:innerText='Client Name:' /&gt;" Guid="26068858-2194-4c96-a59a-1389e30c47bf" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="58335c6df674921f34dbd61e4d668373.png" xmlns="">07wBbG5BX2UyvocJSu4M38A</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

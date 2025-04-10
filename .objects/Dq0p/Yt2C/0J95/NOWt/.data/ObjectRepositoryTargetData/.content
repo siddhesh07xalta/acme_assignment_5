@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="WDdENhv7PUeDplnhgNYDEQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="mr2aSam9fEGlhoy_EJUaVA" Reference="HFJFrCTOQka7zKhle0Z_YQ/NOWtRVrgPUSFrPvPvbfvqQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://acme-test.uipath.com/work-items" DesignTimeRectangle="211, 523, 1498, 631" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="54117ee7-b3b8-4bdd-abba-ab86bc9f15fd" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="5f776f283235b50991ae51b3137b8853.png" xmlns="">0_R5l9bO3oUq3XnOQlmcXQQ</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://acme-test.uipath.com/work-items?page=1" ContentHash="WDdENhv7PUeDplnhgNYDEQ" DesignTimeRectangle="211, 747, 1498, 631" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="a6f36cb0-ceb0-4ba8-a83a-cccadccafc61" Reference="HFJFrCTOQka7zKhle0Z_YQ/NOWtRVrgPUSFrPvPvbfvqQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="3805d23dc5542d02ba5623197d854f49.png" xmlns="">0omiyBBXcJU-hLQ4T2ryn8w</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">ExtractData</x:String>
     <p:InArgument x:TypeArguments="x:String" x:Key="ExtractDataSettings" xml:space="preserve">&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;
@@ -57,7 +57,7 @@
 	&lt;/Column&gt;
 	&lt;Column xsi:type='DataNextLink' /&gt;
 &lt;/Table&gt;</p:InArgument>
-    <TargetAnchorable x:Key="NextLinkTarget" BrowserURL="acme-test.uipath.com/work-items" CVScreenId="30deede8-6b0f-4047-b9ef-15f635fdf8e8" CvElementArea="1663, 888, 41, 38" CvTextArea="1676, 899, 15, 15" CvTextArgument="&gt;" CvType="Button" DesignTimeRectangle="1668, 892, 33, 33" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-label='Next »' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Next »' tag='A' type='' class='page-numbers' aaname='&amp;gt;' check:innerText='&amp;gt;' /&gt;" Guid="fee4dbbc-9cd6-4d59-8a4c-97301c211285" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+    <TargetAnchorable x:Key="NextLinkTarget" BrowserURL="acme-test.uipath.com/work-items" CVScreenId="49535ed4-16c2-49fa-a2e5-a2e2280fc36e" CvElementArea="1663, 787, 41, 39" CvTextArea="1676, 797, 13, 15" CvTextArgument="&gt;" CvType="Button" DesignTimeRectangle="1668, 790, 33, 33" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-label='Next »' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Next »' tag='A' type='' class='page-numbers' aaname='&amp;gt;' check:innerText='&amp;gt;' /&gt;" Guid="a77085fe-3e89-486d-9e7e-b3b17d6b3b32" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
       <TargetAnchorable.PointOffset>
         <PointOffset />
       </TargetAnchorable.PointOffset>
