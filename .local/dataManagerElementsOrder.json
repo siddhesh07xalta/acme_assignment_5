@@ -20,30 +20,111 @@
         "client_country&Sequence_1",
         "wwid&Sequence_1",
         "dt_extraccted&Sequence_1",
-        "dt_filtered&Sequence_1",
-        "variable1&Sequence_66",
-        "dt_extraccted&Sequence_66",
-        "client_name&Sequence_68"
+        "dt_filtered&Sequence_1"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_Config",
+        "FileName"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
     {
-      "Path": "temp.xaml",
+      "Path": "Framework/Initialize.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "LogOut&Sequence_3"
+        "dt_configData&Sequence_67"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_Config",
+        "FileName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/ExtractDataTable.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_Config",
+        "dt_filtered",
+        "dt_extracted_data",
+        "FileName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/ProcessDataTable.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "client_name&Sequence_68"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_Config",
+        "dt_filtered",
+        "client_id",
+        "client_country",
+        "wwid",
+        "sha_code",
+        "FileName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Log Handling/LogFolderCreation.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "LogFolderExistsOrNot&Sequence_2",
+        "AuditFolderExistsOrNot&Sequence_2",
+        "ErrorFolderExistsOrNot&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
     {
-      "Path": "gfas.xaml",
+      "Path": "Framework/Log Handling/LogHandling.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
-      "ArgumentsSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "variable1&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_LogMessage",
+        "in_LogLevel",
+        "FileName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Log Handling/AddLogsToAuditFile.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FileExistsOrNot&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "FileName",
+        "in_LogMessage",
+        "in_LogLevel"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Log Handling/AddErrorLogsToErrorFile.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FileExistsOrNot&Sequence_1",
+        "FileExistsOrNot&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "FileName",
+        "In_LogMessage",
+        "in_LogLevel"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
