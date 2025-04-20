@@ -1,0 +1,1 @@
+﻿04/11/2025 14:28:14 | DESKTOP-KU64ATF | Siddhesh Sonawane | Error | The UI element is invalid. Make sure the target application is open and the element is on the screen.

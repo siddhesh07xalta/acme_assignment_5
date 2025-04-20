@@ -1,0 +1,14 @@
+﻿{
+  "Name": "SysListView32",
+  "Type": "Element",
+  "TaxonomyType": "Listbox",
+  "Id": "ocLRRhikk02fAbkzrKNKew",
+  "Reference": "HFJFrCTOQka7zKhle0Z_YQ/ocLRRhikk02fAbkzrKNKew",
+  "ParentRef": "HFJFrCTOQka7zKhle0Z_YQ/j2mzPZ4EaU6sNx8vgi-mVQ",
+  "Created": "2025-04-11T09:09:29.791118Z",
+  "Updated": "2025-04-11T09:09:29.791118Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.2.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -104,7 +104,7 @@
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AddErrorLogsToErrorFile" sap:VirtualizedContainerService.HintSize="1194.6666666666667,1390.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AddErrorLogsToErrorFile" sap:VirtualizedContainerService.HintSize="1194.6666666666667,1283.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="FileExistsOrNot" />
       <Variable x:TypeArguments="ui:Image" Name="img" />
@@ -114,27 +114,23 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="452,1368" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap:VirtualizedContainerService.HintSize="452,1260.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NTakeScreenshot DisplayName="Take Screenshot 'list Desktop'" FileName="[&quot;.\Data\ErrorScreenshots\Error_ &quot;+ DateTime.Now.ToString(&quot;dd_MM_yyyy_HH_mm_ss_ffff&quot;) + &quot;.png&quot;]" FileNameMode="None" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="418,216.66666666666666" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_3" OutImage="[img]" SaveScreenshotTo="Image" Version="V4">
-        <uix:NTakeScreenshot.Target>
-          <uix:TargetAnchorable ContentHash="ir6rpU0FM0-5SSXYXGO6pQ" DesignTimeRectangle="0, 0, 1920, 1080" DesignTimeScaleFactor="1.5" ElementType="List" FuzzySelectorArgument="&lt;uia automationid='1' cls='SysListView32' name='Desktop' role='list' /&gt;" Guid="ec50a277-928b-42c0-917a-b48fc62bf976" ImageBase64="" InformativeScreenshot="af2ed59216023509b6cdf67946255989.png" Reference="VQdtXO9bwUyBb3VLBwW5tA/yt6ab8tH7EiKTbaxVQC0Ig" ScopeSelectorArgument="&lt;wnd app='explorer.exe' cls='Progman' title='Program Manager' /&gt;" SearchSteps="FuzzySelector" SelectionStrategy="UIA" Version="V5" Visibility="Interactive" />
-        </uix:NTakeScreenshot.Target>
+      <uix:NTakeScreenshot DisplayName="Take Screenshot" FileName="[&quot;./Data/Screenshots/Error_Screenshot_&quot; + DateTime.Now.ToString(&quot;dd_MM_yyyy_HH_mm_ss_ffff&quot;)+  &quot;.png&quot;]" FileNameMode="None" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="418,272.6666666666667" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_5" Version="V4">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uix:NTakeScreenshot>
-      <ui:SaveImage DisplayName="Save Image" FileName="[&quot;.\Data\ErrorScreenshots\&quot;+DateTime.Now.ToString(&quot;dd_MM_yyyy_HH_mm_ss_ffff&quot;) + &quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="418,168" sap2010:WorkflowViewState.IdRef="SaveImage_1" Image="[img]" />
-      <ui:FileExistsX DisplayName="File Exists" Exists="[FileExistsOrNot]" sap:VirtualizedContainerService.HintSize="418,167.33333333333334" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[&quot;.\Data\Logs\Error_Logs\&quot; + FileName]" />
-      <If Condition="[FileExistsOrNot]" sap:VirtualizedContainerService.HintSize="418,733.3333333333334" sap2010:WorkflowViewState.IdRef="If_1">
+      <ui:FileExistsX DisplayName="File Exists" Exists="[FileExistsOrNot]" sap:VirtualizedContainerService.HintSize="418,168.66666666666666" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[&quot;.\Data\Logs\Error_Logs\&quot; + FileName]" />
+      <If Condition="[FileExistsOrNot]" sap:VirtualizedContainerService.HintSize="418,736.6666666666666" sap2010:WorkflowViewState.IdRef="If_1">
         <If.Then>
-          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,219.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="FileExistsOrNot" />
             </Sequence.Variables>
@@ -143,17 +139,17 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="[&quot;.\Logs\Error_Logs\&quot; + FileName]" sap:VirtualizedContainerService.HintSize="382,158" sap2010:WorkflowViewState.IdRef="AppendLine_2" Text="[Now.ToString() + &quot; | &quot; + Environment.MachineName + &quot; | &quot; + Environment.UserName + &quot; | &quot; +&quot;Error&quot; +&quot; | &quot; + in_LogMessage + Environment.NewLine]" UseDefaultEncoding="False" />
+            <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="[&quot;.\Logs\Error_Logs\&quot; + FileName]" sap:VirtualizedContainerService.HintSize="382,159.33333333333334" sap2010:WorkflowViewState.IdRef="AppendLine_2" Text="[Now.ToString() + &quot; | &quot; + Environment.MachineName + &quot; | &quot; + Environment.UserName + &quot; | &quot; +&quot;Error&quot; +&quot; | &quot; + in_LogMessage + Environment.NewLine]" UseDefaultEncoding="False" />
           </Sequence>
         </If.Then>
         <If.Else>
-          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,385.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,386.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CreateFile ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create File" sap:VirtualizedContainerService.HintSize="382,167.33333333333334" sap2010:WorkflowViewState.IdRef="CreateFile_1" Name="[FileName]" Path=".\Data\Logs\Error_Logs\" />
+            <ui:CreateFile ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create File" sap:VirtualizedContainerService.HintSize="382,168.66666666666666" sap2010:WorkflowViewState.IdRef="CreateFile_1" Name="[FileName]" Path=".\Data\Logs\Error_Logs\" />
             <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="[&quot;.\Data\Logs\Error_Logs\&quot; + FileName]" sap:VirtualizedContainerService.HintSize="382,158" sap2010:WorkflowViewState.IdRef="AppendLine_3" Text="[Now.ToString() + &quot; | &quot; + Environment.MachineName + &quot; | &quot; + Environment.UserName + &quot; | &quot; +&quot;Error&quot; +&quot; | &quot; + in_LogMessage + Environment.NewLine]" UseDefaultEncoding="False" />
           </Sequence>
         </If.Else>

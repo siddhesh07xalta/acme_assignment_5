@@ -12,17 +12,10 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "username&Sequence_1",
-        "password&Sequence_1",
-        "dt_extracted_data&Sequence_1",
-        "client_id&Sequence_1",
-        "sha_code&Sequence_1",
-        "client_country&Sequence_1",
-        "wwid&Sequence_1",
-        "dt_extraccted&Sequence_1",
-        "dt_filtered&Sequence_1"
+        "out_Config&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "dt_filtered",
         "out_Config",
         "FileName"
       ],
@@ -45,11 +38,12 @@
     {
       "Path": "Framework/ExtractDataTable.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "dt_extracted_data&Sequence_76"
+      ],
       "ArgumentsSectionElementsOrder": [
         "out_Config",
         "dt_filtered",
-        "dt_extracted_data",
         "FileName"
       ],
       "ConstantsSectionElementsOrder": [],
@@ -59,16 +53,18 @@
       "Path": "Framework/ProcessDataTable.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "client_name&Sequence_68"
+        "client_id&Sequence_81",
+        "client_country&Sequence_81",
+        "sha_code&Sequence_81",
+        "client_name&Sequence_68",
+        "wwid&Sequence_68",
+        "newDataTable&Sequence_78",
+        "newDataRow&Sequence_78"
       ],
       "ArgumentsSectionElementsOrder": [
         "out_Config",
-        "dt_filtered",
-        "client_id",
-        "client_country",
-        "wwid",
-        "sha_code",
-        "FileName"
+        "FileName",
+        "dt_filtered"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -117,6 +113,7 @@
       "Path": "Framework/Log Handling/AddErrorLogsToErrorFile.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "img&Sequence_1",
         "FileExistsOrNot&Sequence_1",
         "FileExistsOrNot&Sequence_3"
       ],

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8BsDR7zXJ7o=",
+  "dgSpecHash": "XGaw9ulhjI4=",
   "success": true,
   "projectFilePath": "C:\\Users\\Siddhesh Sonawane\\OneDrive - Xalta Technology Services Pvt Ltd\\Training\\Day 21\\ACME Item 5 Automation\\.local\\",
   "expectedPackageFiles": [
@@ -285,9 +285,9 @@
     "C:\\Users\\Siddhesh Sonawane\\.nuget\\packages\\uipath.officelibs\\1.0.0\\uipath.officelibs.1.0.0.nupkg.sha512",
     "C:\\Users\\Siddhesh Sonawane\\.nuget\\packages\\uipath.opentelemetry.contracts\\2.3.3\\uipath.opentelemetry.contracts.2.3.3.nupkg.sha512",
     "C:\\Users\\Siddhesh Sonawane\\.nuget\\packages\\uipath.platform\\24.12.3\\uipath.platform.24.12.3.nupkg.sha512",
-    "C:\\Users\\Siddhesh Sonawane\\.nuget\\packages\\uipath.system.activities\\25.2.1\\uipath.system.activities.25.2.1.nupkg.sha512",
-    "C:\\Users\\Siddhesh Sonawane\\.nuget\\packages\\uipath.system.activities.runtime\\25.2.1\\uipath.system.activities.runtime.25.2.1.nupkg.sha512",
-    "C:\\Users\\Siddhesh Sonawane\\.nuget\\packages\\uipath.system.activities.runtime.windows\\25.2.1\\uipath.system.activities.runtime.windows.25.2.1.nupkg.sha512",
+    "C:\\Users\\Siddhesh Sonawane\\.nuget\\packages\\uipath.system.activities\\25.2.4\\uipath.system.activities.25.2.4.nupkg.sha512",
+    "C:\\Users\\Siddhesh Sonawane\\.nuget\\packages\\uipath.system.activities.runtime\\25.2.4\\uipath.system.activities.runtime.25.2.4.nupkg.sha512",
+    "C:\\Users\\Siddhesh Sonawane\\.nuget\\packages\\uipath.system.activities.runtime.windows\\25.2.4\\uipath.system.activities.runtime.windows.25.2.4.nupkg.sha512",
     "C:\\Users\\Siddhesh Sonawane\\.nuget\\packages\\uipath.telemetry.client\\2.3.3\\uipath.telemetry.client.2.3.3.nupkg.sha512",
     "C:\\Users\\Siddhesh Sonawane\\.nuget\\packages\\uipath.uiautomation.activities\\25.2.1-preview\\uipath.uiautomation.activities.25.2.1-preview.nupkg.sha512",
     "C:\\Users\\Siddhesh Sonawane\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.2.1-preview\\uipath.uiautomation.activities.runtime.25.2.1-preview.nupkg.sha512",

@@ -1,12 +1,8 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="ProcessDataTable" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="dt_filtered" Type="InArgument(sd:DataRow[])" />
-    <x:Property Name="client_id" Type="InOutArgument(x:String)" />
-    <x:Property Name="client_country" Type="InOutArgument(x:String)" />
-    <x:Property Name="wwid" Type="InOutArgument(x:String)" />
-    <x:Property Name="sha_code" Type="InOutArgument(x:String)" />
     <x:Property Name="FileName" Type="InArgument(x:String)" />
-    <x:Property Name="out_Config" Type="InOutArgument(scg:Dictionary(x:String, x:String))" />
+    <x:Property Name="out_Config" Type="InOutArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
@@ -48,6 +44,87 @@
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>Microsoft</x:String>
+      <x:String>Microsoft.Win32.SafeHandles</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>System.Globalization</x:String>
+      <x:String>System.Configuration.Assemblies</x:String>
+      <x:String>System.CodeDom.Compiler</x:String>
+      <x:String>System.Buffers</x:String>
+      <x:String>System.Buffers.Text</x:String>
+      <x:String>System.Buffers.Binary</x:String>
+      <x:String>System.Threading</x:String>
+      <x:String>System.Threading.Tasks</x:String>
+      <x:String>System.Threading.Tasks.Sources</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Text.Unicode</x:String>
+      <x:String>System.Security.Principal</x:String>
+      <x:String>System.Security.Permissions</x:String>
+      <x:String>System.Security.Cryptography</x:String>
+      <x:String>System.Runtime</x:String>
+      <x:String>System.Runtime.Remoting</x:String>
+      <x:String>System.Runtime.ExceptionServices</x:String>
+      <x:String>System.Runtime.ConstrainedExecution</x:String>
+      <x:String>System.Runtime.Versioning</x:String>
+      <x:String>System.Runtime.Loader</x:String>
+      <x:String>System.Runtime.Intrinsics</x:String>
+      <x:String>System.Runtime.Intrinsics.Wasm</x:String>
+      <x:String>System.Runtime.Intrinsics.Arm</x:String>
+      <x:String>System.Runtime.Intrinsics.X86</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.InteropServices.ObjectiveC</x:String>
+      <x:String>System.Runtime.InteropServices.Marshalling</x:String>
+      <x:String>System.Runtime.InteropServices.ComTypes</x:String>
+      <x:String>System.Runtime.CompilerServices</x:String>
+      <x:String>System.Resources</x:String>
+      <x:String>System.Reflection.Metadata</x:String>
+      <x:String>System.Reflection.Emit</x:String>
+      <x:String>System.IO.Enumeration</x:String>
+      <x:String>System.Diagnostics.SymbolStore</x:String>
+      <x:String>System.Diagnostics.Contracts</x:String>
+      <x:String>System.Diagnostics.CodeAnalysis</x:String>
+      <x:String>System.Diagnostics.Tracing</x:String>
+      <x:String>System.Collections.Concurrent</x:String>
+      <x:String>Internal</x:String>
+      <x:String>System.CodeDom</x:String>
+      <x:String>Microsoft.CSharp</x:String>
+      <x:String>System.Linq.Expressions.Interpreter</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>UiPath.Workflow.Runtime</x:String>
+      <x:String>UiPath.Workflow.Runtime.Statements</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.Tracking</x:String>
+      <x:String>System.Activities.Statements.Tracking</x:String>
+      <x:String>System.Activities.Runtime</x:String>
+      <x:String>System.Activities.Runtime.DurableInstancing</x:String>
+      <x:String>System.Activities.ParallelTracking</x:String>
+      <x:String>System.Activities.Hosting</x:String>
+      <x:String>System.Activities.Persistence</x:String>
+      <x:String>System.Activities.DurableInstancing</x:String>
+      <x:String>System.ComponentModel.Design.Serialization</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Security.Authentication.ExtendedProtection</x:String>
+      <x:String>System.Timers</x:String>
+      <x:String>System.ComponentModel.Design</x:String>
+      <x:String>System.Xml.Schema</x:String>
+      <x:String>System.Xml.Xsl</x:String>
+      <x:String>System.Xml.Xsl.Runtime</x:String>
+      <x:String>System.Xml.XPath</x:String>
+      <x:String>System.Xml.Resolvers</x:String>
+      <x:String>Microsoft.CodeAnalysis</x:String>
+      <x:String>Microsoft.CodeAnalysis.FlowAnalysis</x:String>
+      <x:String>Microsoft.CodeAnalysis.Text</x:String>
+      <x:String>Microsoft.CodeAnalysis.Diagnostics</x:String>
+      <x:String>Microsoft.CodeAnalysis.Diagnostics.Telemetry</x:String>
+      <x:String>Microsoft.CodeAnalysis.Operations</x:String>
+      <x:String>Microsoft.CodeAnalysis.Emit</x:String>
+      <x:String>Microsoft.CodeAnalysis.VisualBasic</x:String>
+      <x:String>Microsoft.CodeAnalysis.VisualBasic.Syntax</x:String>
+      <x:String>Microsoft.VisualBasic.FileIO</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -119,142 +196,395 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualStudio.Validation</AssemblyReference>
+      <AssemblyReference>System.IO.Pipes</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography</AssemblyReference>
+      <AssemblyReference>System.Security.Principal.Windows</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.Process</AssemblyReference>
+      <AssemblyReference>System.IO.MemoryMappedFiles</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Registry</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>System.Threading.AccessControl</AssemblyReference>
+      <AssemblyReference>System.Threading</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>System.Threading.Tasks.Parallel</AssemblyReference>
+      <AssemblyReference>System.Text.Encoding.CodePages</AssemblyReference>
+      <AssemblyReference>System.Text.Encodings.Web</AssemblyReference>
+      <AssemblyReference>System.Security.Claims</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.Pkcs</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.ProtectedData</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.CompilerServices.VisualC</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Resources.Writer</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>Microsoft.PowerShell.Commands.Diagnostics</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.FileVersionInfo</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.DiagnosticSource</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.TraceSource</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.EventLog</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.PerformanceCounter</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.TextWriterTraceListener</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.StackTrace</AssemblyReference>
+      <AssemblyReference>System.Collections.Concurrent</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Net.Security</AssemblyReference>
+      <AssemblyReference>System.Private.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xml.XPath.XDocument</AssemblyReference>
+      <AssemblyReference>Microsoft.CodeAnalysis.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.CodeAnalysis.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.CodeAnalysis</AssemblyReference>
+      <AssemblyReference>Microsoft.CodeAnalysis.Features</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1194.6666666666667,3395.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_81">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap:VirtualizedContainerService.HintSize="1194.6666666666667,3559.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_81">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="client_id" />
+      <Variable x:TypeArguments="x:String" Name="client_country" />
+      <Variable x:TypeArguments="x:String" Name="sha_code" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ForEach x:TypeArguments="sd:DataRow" CurrentIndex="{x:Null}" DisplayName="For Each currentDataRow" sap:VirtualizedContainerService.HintSize="626,3372.6666666666665" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[dt_filtered]">
-      <ui:ForEach.Body>
-        <ActivityAction x:TypeArguments="sd:DataRow">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="currentDataRow" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="624,3250" sap2010:WorkflowViewState.IdRef="Sequence_69">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="590,3190" sap2010:WorkflowViewState.IdRef="TryCatch_7">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <TryCatch.Try>
-                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="specific action url of w15" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="588,2684.6666666666665" sap2010:WorkflowViewState.IdRef="NApplicationCard_24" InteractionMode="DebuggerApi" ScopeGuid="0583a4de-5502-4b4e-9997-959718c9fb12" Version="V2">
-                  <uix:NApplicationCard.Body>
-                    <ActivityAction x:TypeArguments="x:Object">
-                      <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-                      </ActivityAction.Argument>
-                      <Sequence sap:VirtualizedContainerService.HintSize="554,2465.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_70">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="520,2402.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_68">
-                          <Sequence.Variables>
-                            <Variable x:TypeArguments="x:String" Name="client_name" />
-                          </Sequence.Variables>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <uix:NGetText DisplayName="Get Text 'Client ID'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,191.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="0583a4de-5502-4b4e-9997-959718c9fb12" TextString="[client_id]" Version="V4">
-                            <uix:NGetText.Target>
-                              <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/work-items/105620931" CVScreenId="e9dedf1e-2532-4f0b-8546-fc80494c002f" ContentHash="7Msq2eFm9kW4zTNj5R5XOA" CvTextArea="351, 519, 91, 19" CvType="AnyWordGroup" DesignTimeRectangle="353, 519, 90, 19" DesignTimeScaleFactor="1.5" ElementType="Text" Guid="20766c11-ceab-4220-94f0-7e5d9522aeaf" InformativeScreenshot="c8f84b9651815bd657eeee62184ee7b7.png" Reference="HFJFrCTOQka7zKhle0Z_YQ/PaNNHl8XWEazCAMeYgW5Ew" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V5" Visibility="Interactive">
-                                <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                    <uix:Target CVScreenId="e9dedf1e-2532-4f0b-8546-fc80494c002f" CvTextArea="254, 519, 94, 19" CvTextArgument="Client ID:" CvType="Text" DesignTimeRectangle="256, 518, 92, 23" FuzzySelectorArgument="&lt;webctrl tag='B' type='' class='' aaname='Client ID:' check:innerText='Client ID:' /&gt;" Guid="56f48601-0eab-4119-83dd-20fe9c78d822" SearchSteps="FuzzySelector, CV" />
-                                  </scg:List>
-                                </uix:TargetAnchorable.Anchors>
-                              </uix:TargetAnchorable>
-                            </uix:NGetText.Target>
+    <TryCatch DisplayName="Try Catch for process data table" sap:VirtualizedContainerService.HintSize="628,3536.6666666666665" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch.Finally>
+        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="626,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_84">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </TryCatch.Finally>
+      <TryCatch.Try>
+        <ui:ForEach x:TypeArguments="sd:DataRow" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="iterate through the filtered datatable " DisplayName="For Each currentDataRow" sap:VirtualizedContainerService.HintSize="626,3363.3333333333335" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[dt_filtered]">
+          <ui:ForEach.Body>
+            <ActivityAction x:TypeArguments="sd:DataRow">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="currentDataRow" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="624,3232.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_83">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="590,3172.6666666666665" sap2010:WorkflowViewState.IdRef="TryCatch_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <TryCatch.Try>
+                    <uix:NApplicationCard sap2010:Annotation.AnnotationText="go to specific action url of the work item" AttachMode="ByInstance" DisplayName="specific action url of w15" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="588,2822" sap2010:WorkflowViewState.IdRef="NApplicationCard_24" InteractionMode="DebuggerApi" ScopeGuid="0583a4de-5502-4b4e-9997-959718c9fb12" Version="V2">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <Sequence sap:VirtualizedContainerService.HintSize="554,2532" sap2010:WorkflowViewState.IdRef="Sequence_70">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                          </uix:NGetText>
-                          <uix:NGetText DisplayName="Get Text 'Client Name'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,191.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="0583a4de-5502-4b4e-9997-959718c9fb12" TextString="[client_name]" Version="V4">
-                            <uix:NGetText.Target>
-                              <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/work-items/105620931" CVScreenId="a220765f-048d-4d97-b43e-5571e8389ebe" ContentHash="kz6_JvfZmky3nXhedV579g" CvTextArea="389, 771, 151, 24" CvType="AnyWordGroup" DesignTimeRectangle="389, 772, 151, 22" DesignTimeScaleFactor="1.5" ElementType="Text" Guid="9ba9f75a-21ee-4fab-a0f4-8a681ec8d535" InformativeScreenshot="58335c6df674921f34dbd61e4d668373.png" Reference="HFJFrCTOQka7zKhle0Z_YQ/gZQxiQGvD0CWNOhAibcSIQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V5" Visibility="Interactive">
-                                <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                    <uix:Target CVScreenId="a220765f-048d-4d97-b43e-5571e8389ebe" CvTextArea="254, 771, 128, 20" CvTextArgument="Client Name:" CvType="Text" DesignTimeRectangle="256, 770, 128, 23" FuzzySelectorArgument="&lt;webctrl type='' tag='B' class='' aaname='Client Name:' check:innerText='Client Name:' /&gt;" Guid="26068858-2194-4c96-a59a-1389e30c47bf" SearchSteps="FuzzySelector, CV" />
-                                  </scg:List>
-                                </uix:TargetAnchorable.Anchors>
-                              </uix:TargetAnchorable>
-                            </uix:NGetText.Target>
-                          </uix:NGetText>
-                          <uix:NGetText DisplayName="Get Text 'Client Country'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,191.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="0583a4de-5502-4b4e-9997-959718c9fb12" TextString="[client_country]" Version="V4">
-                            <uix:NGetText.Target>
-                              <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/work-items/105620928" CVScreenId="ef37a3ad-57f5-4b8b-a9a6-22f8b8830ac1" ContentHash="l3Ykd4_LPkWAmVcscWA8nA" CvTextArea="411, 579, 40, 22" CvType="AnyWordGroup" DesignTimeRectangle="411, 579, 40, 22" DesignTimeScaleFactor="1.5" ElementType="Text" Guid="03325beb-0ea6-4ade-90ec-8c7a78181345" InformativeScreenshot="c76efecf9772b900fa5a17f3dfe20d08.png" Reference="HFJFrCTOQka7zKhle0Z_YQ/oORjrppKa0GmqyRPoLKo_A" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V5" Visibility="Interactive">
-                                <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                    <uix:Target CVScreenId="ef37a3ad-57f5-4b8b-a9a6-22f8b8830ac1" CvTextArea="254, 579, 152, 22" CvTextArgument="Client Country:" CvType="Text" DesignTimeRectangle="256, 578, 151, 23" FuzzySelectorArgument="&lt;webctrl type='' tag='B' class='' aaname='Client Country:' check:innerText='Client Country:' /&gt;" Guid="bceaa6f7-7289-43b6-a0fd-b661a2fb7859" SearchSteps="FuzzySelector, CV" />
-                                  </scg:List>
-                                </uix:TargetAnchorable.Anchors>
-                              </uix:TargetAnchorable>
-                            </uix:NGetText.Target>
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                          </uix:NGetText>
-                          <uix:NGetText DisplayName="Get Text 'WIID'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,191.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="0583a4de-5502-4b4e-9997-959718c9fb12" TextString="[wwid]" Version="V4">
-                            <uix:NGetText.Target>
-                              <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/work-items/105620931" CVScreenId="f5673257-ccd0-484e-94c4-1118b82b4fde" ContentHash="Cyae6osr_ke9yODl1mg5JQ" CvTextArea="921, 674, 102, 21" CvType="AnyWordGroup" DesignTimeRectangle="921, 674, 102, 19" DesignTimeScaleFactor="1.5" ElementType="Text" Guid="724a973a-cfda-4045-b095-706f01a1ce9d" InformativeScreenshot="0960ddef8872de88c4d95f54bc581de3.png" Reference="HFJFrCTOQka7zKhle0Z_YQ/oPqD_NRCjUqAZNIJmH4cvQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V5" Visibility="Interactive">
-                                <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                    <uix:Target CVScreenId="f5673257-ccd0-484e-94c4-1118b82b4fde" CvTextArea="858, 674, 55, 19" CvTextArgument="WIID:" CvType="Text" DesignTimeRectangle="861, 673, 54, 23" FuzzySelectorArgument="&lt;webctrl type='' tag='B' class='' aaname='WIID:' check:innerText='WIID:' /&gt;" Guid="ce997adf-1365-45dd-8339-7a383768db94" SearchSteps="FuzzySelector, CV" />
-                                  </scg:List>
-                                </uix:TargetAnchorable.Anchors>
-                              </uix:TargetAnchorable>
-                            </uix:NGetText.Target>
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                          </uix:NGetText>
-                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="486,962" sap2010:WorkflowViewState.IdRef="TryCatch_8">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <TryCatch.Try>
-                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="sha window" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="484,447.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_22" InteractionMode="DebuggerApi" ScopeGuid="ea1a8af4-ef17-4308-825b-079bf954fa7d" Version="V2">
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="520,2469.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:String" Name="client_name" />
+                                <Variable x:TypeArguments="x:String" Name="wwid" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="log" sap:VirtualizedContainerService.HintSize="486,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\Log Handling\LogHandling.xaml">
+                                <ui:InvokeWorkflowFile.Arguments>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_LogMessage">opened browser for getting client details</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_LogLevel">info</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="FileName">[FileName]</InArgument>
+                                </ui:InvokeWorkflowFile.Arguments>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:InvokeWorkflowFile>
+                              <uix:NGetText DisplayName="Get Text 'Client ID'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,57.333333333333336" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="0583a4de-5502-4b4e-9997-959718c9fb12" TextString="[client_id]" Version="V4">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/work-items/105620931" CVScreenId="e9dedf1e-2532-4f0b-8546-fc80494c002f" ContentHash="7Msq2eFm9kW4zTNj5R5XOA" CvTextArea="351, 519, 91, 19" CvType="AnyWordGroup" DesignTimeRectangle="353, 519, 90, 19" DesignTimeScaleFactor="1.5" ElementType="Text" Guid="20766c11-ceab-4220-94f0-7e5d9522aeaf" InformativeScreenshot="c8f84b9651815bd657eeee62184ee7b7.png" Reference="HFJFrCTOQka7zKhle0Z_YQ/PaNNHl8XWEazCAMeYgW5Ew" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V5" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target CVScreenId="e9dedf1e-2532-4f0b-8546-fc80494c002f" CvTextArea="254, 519, 94, 19" CvTextArgument="Client ID:" CvType="Text" DesignTimeRectangle="256, 518, 92, 23" FuzzySelectorArgument="&lt;webctrl tag='B' type='' class='' aaname='Client ID:' check:innerText='Client ID:' /&gt;" Guid="56f48601-0eab-4119-83dd-20fe9c78d822" SearchSteps="FuzzySelector, CV" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NGetText>
+                              <uix:NGetText DisplayName="Get Text 'Client Name'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,57.333333333333336" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="0583a4de-5502-4b4e-9997-959718c9fb12" TextString="[client_name]" Version="V4">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/work-items/105620931" CVScreenId="a220765f-048d-4d97-b43e-5571e8389ebe" ContentHash="kz6_JvfZmky3nXhedV579g" CvTextArea="389, 771, 151, 24" CvType="AnyWordGroup" DesignTimeRectangle="389, 772, 151, 22" DesignTimeScaleFactor="1.5" ElementType="Text" Guid="9ba9f75a-21ee-4fab-a0f4-8a681ec8d535" InformativeScreenshot="58335c6df674921f34dbd61e4d668373.png" Reference="HFJFrCTOQka7zKhle0Z_YQ/gZQxiQGvD0CWNOhAibcSIQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V5" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target CVScreenId="a220765f-048d-4d97-b43e-5571e8389ebe" CvTextArea="254, 771, 128, 20" CvTextArgument="Client Name:" CvType="Text" DesignTimeRectangle="256, 770, 128, 23" FuzzySelectorArgument="&lt;webctrl type='' tag='B' class='' aaname='Client Name:' check:innerText='Client Name:' /&gt;" Guid="26068858-2194-4c96-a59a-1389e30c47bf" SearchSteps="FuzzySelector, CV" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                              </uix:NGetText>
+                              <uix:NGetText DisplayName="Get Text 'Client Country'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,57.333333333333336" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="0583a4de-5502-4b4e-9997-959718c9fb12" TextString="[client_country]" Version="V4">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/work-items/105620928" CVScreenId="ef37a3ad-57f5-4b8b-a9a6-22f8b8830ac1" ContentHash="l3Ykd4_LPkWAmVcscWA8nA" CvTextArea="411, 579, 40, 22" CvType="AnyWordGroup" DesignTimeRectangle="411, 579, 40, 22" DesignTimeScaleFactor="1.5" ElementType="Text" Guid="03325beb-0ea6-4ade-90ec-8c7a78181345" InformativeScreenshot="c76efecf9772b900fa5a17f3dfe20d08.png" Reference="HFJFrCTOQka7zKhle0Z_YQ/oORjrppKa0GmqyRPoLKo_A" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V5" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target CVScreenId="ef37a3ad-57f5-4b8b-a9a6-22f8b8830ac1" CvTextArea="254, 579, 152, 22" CvTextArgument="Client Country:" CvType="Text" DesignTimeRectangle="256, 578, 151, 23" FuzzySelectorArgument="&lt;webctrl type='' tag='B' class='' aaname='Client Country:' check:innerText='Client Country:' /&gt;" Guid="bceaa6f7-7289-43b6-a0fd-b661a2fb7859" SearchSteps="FuzzySelector, CV" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NGetText>
+                              <uix:NGetText DisplayName="Get Text 'WIID'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="486,57.333333333333336" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="0583a4de-5502-4b4e-9997-959718c9fb12" TextString="[wwid]" Version="V4">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/work-items/105620931" CVScreenId="f5673257-ccd0-484e-94c4-1118b82b4fde" ContentHash="Cyae6osr_ke9yODl1mg5JQ" CvTextArea="921, 674, 102, 21" CvType="AnyWordGroup" DesignTimeRectangle="921, 674, 102, 19" DesignTimeScaleFactor="1.5" ElementType="Text" Guid="724a973a-cfda-4045-b095-706f01a1ce9d" InformativeScreenshot="0960ddef8872de88c4d95f54bc581de3.png" Reference="HFJFrCTOQka7zKhle0Z_YQ/oPqD_NRCjUqAZNIJmH4cvQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V5" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target CVScreenId="f5673257-ccd0-484e-94c4-1118b82b4fde" CvTextArea="858, 674, 55, 19" CvTextArgument="WIID:" CvType="Text" DesignTimeRectangle="861, 673, 54, 23" FuzzySelectorArgument="&lt;webctrl type='' tag='B' class='' aaname='WIID:' check:innerText='WIID:' /&gt;" Guid="ce997adf-1365-45dd-8339-7a383768db94" SearchSteps="FuzzySelector, CV" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NGetText>
+                              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="486,1164.6666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_8">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <TryCatch.Try>
+                                  <uix:NApplicationCard sap2010:Annotation.AnnotationText="used to calculate the client security hash of the specific work item&#xA;used client_id, client_name, client_country to calculate hash code" AttachMode="ByInstance" DisplayName="sha webpage" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="484,715.3333333333334" sap2010:WorkflowViewState.IdRef="NApplicationCard_22" InteractionMode="DebuggerApi" ScopeGuid="ea1a8af4-ef17-4308-825b-079bf954fa7d" Version="V2">
+                                    <uix:NApplicationCard.Body>
+                                      <ActivityAction x:TypeArguments="x:Object">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,450.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="log" sap:VirtualizedContainerService.HintSize="416,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Framework\Log Handling\LogHandling.xaml">
+                                            <ui:InvokeWorkflowFile.Arguments>
+                                              <InArgument x:TypeArguments="x:String" x:Key="in_LogMessage">opened browser for getting sha code from client_id, client_name, client_country</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="in_LogLevel">info</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="FileName">[FileName]</InArgument>
+                                            </ui:InvokeWorkflowFile.Arguments>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </ui:InvokeWorkflowFile>
+                                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="type client_id + client_name + client_country" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57.333333333333336" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="ea1a8af4-ef17-4308-825b-079bf954fa7d" Text="[client_id + &quot;-&quot;+ client_name + &quot;-&quot;+ client_country]" Version="V4">
+                                            <uix:NTypeInto.Target>
+                                              <uix:TargetAnchorable BrowserURL="sha1-online.com" CVScreenId="7c2da495-a9a5-4c38-a9a4-37e9ad31c8cd" ContentHash="LWII0PWstk2m6iqXeOmibA" CvElementArea="674, 535, 500, 34" CvType="InputBox" DesignTimeRectangle="675, 536, 499, 32" DesignTimeScaleFactor="1.5" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='textToHashId' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="896b38c4-485b-4e4a-8c74-a6f0e8daeb23" InformativeScreenshot="0af8d9544e0c10f54033f9017a4cca54.png" Reference="HFJFrCTOQka7zKhle0Z_YQ/idaHyUyL7Ey03e-RCiH3GQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SHA1 online' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive" />
+                                            </uix:NTypeInto.Target>
+                                            <uix:NTypeInto.VerifyOptions>
+                                              <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                                <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                  <InArgument x:TypeArguments="x:Boolean" />
+                                                </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                  <InArgument x:TypeArguments="x:Double" />
+                                                </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                              </uix:VerifyExecutionTypeIntoOptions>
+                                            </uix:NTypeInto.VerifyOptions>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </uix:NTypeInto>
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'hash'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57.333333333333336" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ea1a8af4-ef17-4308-825b-079bf954fa7d" Version="V4">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="sha1-online.com" CVScreenId="f7fb4f95-065b-42fe-b7d5-d6515558a478" ContentHash="bSWfTHVvBUyMuwrVZojqnQ" CvElementArea="1182, 467, 74, 35" CvTextArea="1196, 473, 46, 19" CvTextArgument="hash" CvType="Button" DesignTimeRectangle="1185, 469, 71, 32" DesignTimeScaleFactor="1.5" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='' aaname='hash' check:text='hash' /&gt;" Guid="130d3b78-0847-493f-888d-968f80bccce1" InformativeScreenshot="9a90b9afa4281f3018c36c17e98d1c0e.png" Reference="HFJFrCTOQka7zKhle0Z_YQ/qfBwUufr0UyEqKz9hRX4tQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SHA1 online' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive" />
+                                            </uix:NClick.Target>
+                                            <uix:NClick.VerifyOptions>
+                                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                <uix:VerifyExecutionOptions.Retry>
+                                                  <InArgument x:TypeArguments="x:Boolean" />
+                                                </uix:VerifyExecutionOptions.Retry>
+                                                <uix:VerifyExecutionOptions.Timeout>
+                                                  <InArgument x:TypeArguments="x:Double" />
+                                                </uix:VerifyExecutionOptions.Timeout>
+                                              </uix:VerifyExecutionOptions>
+                                            </uix:NClick.VerifyOptions>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </uix:NClick>
+                                          <uix:NGetText sap2010:Annotation.AnnotationText="getting sha code and saving it to a variable" DisplayName="Get Text 'sha1'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,96" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="ea1a8af4-ef17-4308-825b-079bf954fa7d" TextString="[sha_code]" Version="V4">
+                                            <uix:NGetText.Target>
+                                              <uix:TargetAnchorable BrowserURL="sha1-online.com" CVScreenId="67daaccd-90d5-4671-a7f8-acd079a160b3" ContentHash="PxQYQZ9hy06TjNDwi-7P-w" CvTextArea="657, 623, 699, 27" CvType="AnyWordGroup" DesignTimeRectangle="654, 620, 710, 33" DesignTimeScaleFactor="1.5" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='result-sha1' tag='SPAN' type='' class='' /&gt;" Guid="ad3d89e3-1df4-4cfb-ac08-99c4754252f9" InformativeScreenshot="caf0434c6c224e75467c9efa5a9cc6ea.png" Reference="HFJFrCTOQka7zKhle0Z_YQ/BTJYS9BX0EqkBW9TtLXG-A" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SHA1 online' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target CVScreenId="67daaccd-90d5-4671-a7f8-acd079a160b3" CvTextArea="552, 624, 82, 24" CvTextArgument="sha1:" CvType="Text" DesignTimeRectangle="552, 624, 82, 24" ElementType="Text" Guid="b4e60073-a769-4087-923f-bf2eb2b4ee6a" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NGetText.Target>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </uix:NGetText>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </uix:NApplicationCard.Body>
+                                    <uix:NApplicationCard.TargetApp>
+                                      <uix:TargetApp Area="-11, -11, 1942, 1042" BrowserType="Edge" ContentHash="xEcaFthgSkCV2YhaNKRL2Q" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAABmSURBVDhPrczRDYAgDIRhH5nAFdx/B1zGJTBHcqY2FNrqw5ejCfm369wblaOG9QAevwWwJD9ahgG5K8sAlnBrroBcLRzAEu5UQO6nAKQDFAoQbnIHLNMA8fOIGfB6BUh/mnkCObXdA5Q5fU2oWVYAAAAASUVORK5CYII=" InformativeScreenshot="138caa6246cec329a3d3ba5da93f2340.jpg" Reference="HFJFrCTOQka7zKhle0Z_YQ/KMkw9vWAn0ebf3hAA5Zy6A" Selector="&lt;html app='msedge.exe' url='http://www.sha1-online.com/' /&gt;" Url="http://www.sha1-online.com/" Version="V2" />
+                                    </uix:NApplicationCard.TargetApp>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NApplicationCard>
+                                </TryCatch.Try>
+                                <TryCatch.Catches>
+                                  <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_7">
+                                    <ActivityAction x:TypeArguments="s:Exception">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,228" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="LogHandling - Invoke Workflow File (Framework\Log Handling\LogHandling.xaml)" sap:VirtualizedContainerService.HintSize="450,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\Log Handling\LogHandling.xaml">
+                                          <ui:InvokeWorkflowFile.Arguments>
+                                            <InArgument x:TypeArguments="x:String" x:Key="in_LogMessage">[exception.Message.toString]</InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="in_LogLevel">error</InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="FileName">[FileName]</InArgument>
+                                          </ui:InvokeWorkflowFile.Arguments>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ui:InvokeWorkflowFile>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </Catch>
+                                </TryCatch.Catches>
+                                <TryCatch.Finally>
+                                  <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="484,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Sequence>
+                                </TryCatch.Finally>
+                              </TryCatch>
+                              <uix:NApplicationCard sap2010:Annotation.AnnotationText="will type the sha code in the comment section of update page, and then mark the status as completed" AttachMode="ByInstance" DisplayName="update wi with sha code" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486,810" sap2010:WorkflowViewState.IdRef="NApplicationCard_23" InteractionMode="DebuggerApi" ScopeGuid="b36fbed1-e38d-4525-a084-f11656aa2b3e" Version="V2">
                                 <uix:NApplicationCard.Body>
                                   <ActivityAction x:TypeArguments="x:Object">
                                     <ActivityAction.Argument>
                                       <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                     </ActivityAction.Argument>
-                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,228" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,520" sap2010:WorkflowViewState.IdRef="Sequence_72">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT textToHashId'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57.333333333333336" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="ea1a8af4-ef17-4308-825b-079bf954fa7d" Text="[client_id + &quot;-&quot;+ client_name + &quot;-&quot;+ client_country]" Version="V4">
+                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="log" sap:VirtualizedContainerService.HintSize="416,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Framework\Log Handling\LogHandling.xaml">
+                                        <ui:InvokeWorkflowFile.Arguments>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_LogMessage">opened browser for updating specific work item with sha code and completion status</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_LogLevel">info</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="FileName">[FileName]</InArgument>
+                                        </ui:InvokeWorkflowFile.Arguments>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:InvokeWorkflowFile>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Add Comments'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57.333333333333336" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="b36fbed1-e38d-4525-a084-f11656aa2b3e" Text="[sha_code]" Version="V4">
                                         <uix:NTypeInto.Target>
-                                          <uix:TargetAnchorable BrowserURL="sha1-online.com" CVScreenId="7c2da495-a9a5-4c38-a9a4-37e9ad31c8cd" ContentHash="LWII0PWstk2m6iqXeOmibA" CvElementArea="674, 535, 500, 34" CvType="InputBox" DesignTimeRectangle="675, 536, 499, 32" DesignTimeScaleFactor="1.5" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='textToHashId' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="896b38c4-485b-4e4a-8c74-a6f0e8daeb23" InformativeScreenshot="0af8d9544e0c10f54033f9017a4cca54.png" Reference="HFJFrCTOQka7zKhle0Z_YQ/idaHyUyL7Ey03e-RCiH3GQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SHA1 online' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive" />
+                                          <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/work-items/update/105620931" CVScreenId="c7da44e7-1f71-482e-ac0f-3dcbecdc8a02" ContentHash="uagHN7KPoUmJEZY9GQBFFA" CvElementArea="141, 578, 1632, 85" CvType="InputBox" DesignTimeRectangle="151, 581, 1618, 80" DesignTimeScaleFactor="1.5" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='newComment' tag='TEXTAREA' type='text' class='form-control' aaname='' /&gt;" Guid="8ecfe484-d877-4f37-83ab-870afd32a911" InformativeScreenshot="7e17ac6e26846986a07f979833e906b8.png" IsResponsive="True" Reference="HFJFrCTOQka7zKhle0Z_YQ/jVendYn0uUWTnFc-Hs69hg" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target CVScreenId="c7da44e7-1f71-482e-ac0f-3dcbecdc8a02" CvTextArea="147, 548, 165, 19" CvTextArgument="Add Comments:" CvType="Text" DesignTimeRectangle="151, 543, 162, 30" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Add Comments:' check:innerText='Add Comments:' /&gt;" Guid="8fa3889d-ab91-420c-8828-b22fd8b9cfb7" SearchSteps="FuzzySelector, CV" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
                                         </uix:NTypeInto.Target>
                                         <uix:NTypeInto.VerifyOptions>
                                           <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
@@ -273,9 +603,15 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </uix:NTypeInto>
-                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'hash'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57.333333333333336" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ea1a8af4-ef17-4308-825b-079bf954fa7d" Version="V4">
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '---'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57.333333333333336" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b36fbed1-e38d-4525-a084-f11656aa2b3e" Version="V4">
                                         <uix:NClick.Target>
-                                          <uix:TargetAnchorable BrowserURL="sha1-online.com" CVScreenId="f7fb4f95-065b-42fe-b7d5-d6515558a478" ContentHash="bSWfTHVvBUyMuwrVZojqnQ" CvElementArea="1182, 467, 74, 35" CvTextArea="1196, 473, 46, 19" CvTextArgument="hash" CvType="Button" DesignTimeRectangle="1185, 469, 71, 32" DesignTimeScaleFactor="1.5" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='' aaname='hash' check:text='hash' /&gt;" Guid="130d3b78-0847-493f-888d-968f80bccce1" InformativeScreenshot="9a90b9afa4281f3018c36c17e98d1c0e.png" Reference="HFJFrCTOQka7zKhle0Z_YQ/qfBwUufr0UyEqKz9hRX4tQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SHA1 online' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive" />
+                                          <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/work-items/update/105620931" CVScreenId="c7da44e7-1f71-482e-ac0f-3dcbecdc8a02" ContentHash="ja22DxhmNkeBBkejW_OP_w" CvElementArea="148, 720, 334, 53" CvType="InputBox" DesignTimeRectangle="151, 721, 330, 50" DesignTimeScaleFactor="1.5" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' class='btn dropdown-toggle bs-placeholder btn-default' aaname='---' check:innerText='---' /&gt;" Guid="559f2aed-d338-4c43-90b4-79f6b83c67e2" InformativeScreenshot="e3cf8d835bec043f65aa90a2153a6d28.png" Reference="HFJFrCTOQka7zKhle0Z_YQ/gxoL57zvWESOVOJ7P94hDA" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target CVScreenId="c7da44e7-1f71-482e-ac0f-3dcbecdc8a02" CvTextArea="149, 687, 121, 19" CvTextArgument="New Status:" CvType="Text" DesignTimeRectangle="151, 683, 120, 30" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='New Status:' tag='LABEL' type='' class='' check:innerText='New Status:' /&gt;" Guid="f67157cf-9fbf-4449-859b-dad188df7cb3" SearchSteps="FuzzySelector, CV" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
                                         </uix:NClick.Target>
                                         <uix:NClick.VerifyOptions>
                                           <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -294,282 +630,160 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </uix:NClick>
-                                      <uix:NGetText DisplayName="Get Text 'sha1'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,50.666666666666664" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="ea1a8af4-ef17-4308-825b-079bf954fa7d" TextString="[sha_code]" Version="V4">
-                                        <uix:NGetText.Target>
-                                          <uix:TargetAnchorable BrowserURL="sha1-online.com" CVScreenId="67daaccd-90d5-4671-a7f8-acd079a160b3" ContentHash="PxQYQZ9hy06TjNDwi-7P-w" CvTextArea="657, 623, 699, 27" CvType="AnyWordGroup" DesignTimeRectangle="654, 620, 710, 33" DesignTimeScaleFactor="1.5" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='result-sha1' tag='SPAN' type='' class='' /&gt;" Guid="ad3d89e3-1df4-4cfb-ac08-99c4754252f9" InformativeScreenshot="caf0434c6c224e75467c9efa5a9cc6ea.png" Reference="HFJFrCTOQka7zKhle0Z_YQ/BTJYS9BX0EqkBW9TtLXG-A" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SHA1 online' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Completed'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57.333333333333336" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b36fbed1-e38d-4525-a084-f11656aa2b3e" Version="V4">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/work-items/update/105620931" CVScreenId="aa540d2b-90c6-4bac-9b7f-a568f6261275" ContentHash="jJTyeY-77kK5SXemb1-26Q" CvTextArea="109, 780, 103, 22" CvTextArgument="Completed" CvType="Text" DesignTimeRectangle="81, 771, 328, 39" DesignTimeScaleFactor="1.5" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Completed' tag='A' type='' class='' check:innerText='Completed' /&gt;" Guid="24a12403-7a5a-4b26-83e5-0e5b6445ac3e" InformativeScreenshot="75cbf7a45f1a837c15f7b119139a4f09.png" Reference="HFJFrCTOQka7zKhle0Z_YQ/aDNmgKc1P0-sJ2euu-XvFg" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
                                             <uix:TargetAnchorable.Anchors>
                                               <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                <uix:Target CVScreenId="67daaccd-90d5-4671-a7f8-acd079a160b3" CvTextArea="552, 624, 82, 24" CvTextArgument="sha1:" CvType="Text" DesignTimeRectangle="552, 624, 82, 24" ElementType="Text" Guid="b4e60073-a769-4087-923f-bf2eb2b4ee6a" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                                <uix:Target CVScreenId="aa540d2b-90c6-4bac-9b7f-a568f6261275" CvElementArea="82, 654, 325, 36" CvType="InputBox" DesignTimeRectangle="81, 654, 328, 39" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='A' type='' class='' aaname='---' check:innerText='---' /&gt;" Guid="d85bbb9f-cb3a-4228-801e-d0ab59f164a2" SearchSteps="FuzzySelector, CV" />
                                               </scg:List>
                                             </uix:TargetAnchorable.Anchors>
                                           </uix:TargetAnchorable>
-                                        </uix:NGetText.Target>
+                                        </uix:NClick.Target>
+                                        <uix:NClick.VerifyOptions>
+                                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                            <uix:VerifyExecutionOptions.Retry>
+                                              <InArgument x:TypeArguments="x:Boolean" />
+                                            </uix:VerifyExecutionOptions.Retry>
+                                            <uix:VerifyExecutionOptions.Timeout>
+                                              <InArgument x:TypeArguments="x:Double" />
+                                            </uix:VerifyExecutionOptions.Timeout>
+                                          </uix:VerifyExecutionOptions>
+                                        </uix:NClick.VerifyOptions>
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                      </uix:NGetText>
+                                      </uix:NClick>
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Update Work Item'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57.333333333333336" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b36fbed1-e38d-4525-a084-f11656aa2b3e" Version="V4">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/work-items/update/105620931" CVScreenId="24c84bfc-7e48-4820-990d-78dc26f35064" ContentHash="k8mctnDbxUmMGaeeqWOTyw" CvElementArea="148, 791, 239, 54" CvTextArea="195, 809, 170, 22" CvTextArgument="Update Work Item" CvType="Button" DesignTimeRectangle="151, 793, 233, 50" DesignTimeScaleFactor="1.5" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='buttonUpdate' tag='BUTTON' type='button' class='btn btn-default' aaname=' Update Work Item' check:innerText='Update Work Item' /&gt;" Guid="2a9f19e4-232e-4dd9-9965-e5333795012d" InformativeScreenshot="d4b362b3d7b722c44b44a0341d02a768.png" Reference="HFJFrCTOQka7zKhle0Z_YQ/oZS5W5lBkUeUK_T02S1OvQ" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                            <uix:TargetAnchorable.PointOffset>
+                                              <uix:PointOffset X="3" Y="3" />
+                                            </uix:TargetAnchorable.PointOffset>
+                                          </uix:TargetAnchorable>
+                                        </uix:NClick.Target>
+                                        <uix:NClick.VerifyOptions>
+                                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                            <uix:VerifyExecutionOptions.Retry>
+                                              <InArgument x:TypeArguments="x:Boolean" />
+                                            </uix:VerifyExecutionOptions.Retry>
+                                            <uix:VerifyExecutionOptions.Timeout>
+                                              <InArgument x:TypeArguments="x:Double" />
+                                            </uix:VerifyExecutionOptions.Timeout>
+                                          </uix:VerifyExecutionOptions>
+                                        </uix:NClick.VerifyOptions>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NClick>
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,50.666666666666664" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b36fbed1-e38d-4525-a084-f11656aa2b3e" Version="V4">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/work-items/105620931" CVScreenId="212d5ee5-6cdf-4fa3-a334-e0db7084c880" ContentHash="UlTjC_FxJEG0hS6fOwgRhA" CvElementArea="1187, 205, 96, 46" CvTextArea="1218, 218, 28, 18" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="1187, 204, 96, 48" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' automationid='' check:fulltext='OK' /&gt;" Guid="762464fc-54ab-4c78-826b-715db6f50082" InformativeScreenshot="502a14a1a07631eb2bbbb0cda491bfff.png" Reference="HFJFrCTOQka7zKhle0Z_YQ/6Iw3RGpBNkqfO2m4gClxuw" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Work - Microsoft​ Edge' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive" />
+                                        </uix:NClick.Target>
+                                        <uix:NClick.VerifyOptions>
+                                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                            <uix:VerifyExecutionOptions.Retry>
+                                              <InArgument x:TypeArguments="x:Boolean" />
+                                            </uix:VerifyExecutionOptions.Retry>
+                                            <uix:VerifyExecutionOptions.Timeout>
+                                              <InArgument x:TypeArguments="x:Double" />
+                                            </uix:VerifyExecutionOptions.Timeout>
+                                          </uix:VerifyExecutionOptions>
+                                        </uix:NClick.VerifyOptions>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NClick>
                                     </Sequence>
                                   </ActivityAction>
                                 </uix:NApplicationCard.Body>
                                 <uix:NApplicationCard.TargetApp>
-                                  <uix:TargetApp Area="-11, -11, 1942, 1042" BrowserType="Edge" ContentHash="GkdzXrNYO0OTgagZon59wQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAABmSURBVDhPrczRDYAgDIRhH5nAFdx/B1zGJTBHcqY2FNrqw5ejCfm369wblaOG9QAevwWwJD9ahgG5K8sAlnBrroBcLRzAEu5UQO6nAKQDFAoQbnIHLNMA8fOIGfB6BUh/mnkCObXdA5Q5fU2oWVYAAAAASUVORK5CYII=" InformativeScreenshot="138caa6246cec329a3d3ba5da93f2340.jpg" Reference="HFJFrCTOQka7zKhle0Z_YQ/KMkw9vWAn0ebf3hAA5Zy6A" Selector="&lt;html app='msedge.exe' title='SHA1 online' /&gt;" Url="http://www.sha1-online.com/" Version="V2" />
+                                  <uix:TargetApp Area="0, 0, 698, 1005" BrowserType="Edge" ContentHash="DjRszdMliEebLJmaSLTNlg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAELSURBVDhPpZMBDcJADEWnAANgAAxgAOxgAASAATAABkAAGAADmOG/7v6lLLeEhJ+85Na0f21v6xpaiq24i3fhKg5iJkY1ERS+BAUPMS1wdoycpvwWjFxs0dVTENsJcsmrwtXOa3Hpj186C4wQL6qdMBdzEtgIEoFzhhhv5kwX1IQhbuBEdpCfDUWM4eeTiC5wnXMowuBrviJiGFhebrSSNXzOaub+bcAHkz+QX0dYCMaP5RyFl4OBbyTDYvMSvfy4ClpxEa5j1+g4udTUj40uwk3CkMShiK36YxjEFVrMx5sJ4soY/uoQO+LKyNuLmL0lOsk/DoUuJub9tJZcRQeMcxPMCRhQmLuSuu4DxhFTUDOzJRUAAAAASUVORK5CYII=" InformativeScreenshot="260db726ac29b61845eee124f2996aa6.jpg" Reference="HFJFrCTOQka7zKhle0Z_YQ/EhFdMdPXAEiiT-gXNSfiHQ" Selector="&lt;html app='msedge.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;" Url="[&quot;https://acme-test.uipath.com/work-items/update/&quot; +wwid.ToString]" Version="V2" />
                                 </uix:NApplicationCard.TargetApp>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </uix:NApplicationCard>
-                            </TryCatch.Try>
-                            <TryCatch.Catches>
-                              <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_7">
-                                <ActivityAction x:TypeArguments="s:Exception">
-                                  <ActivityAction.Argument>
-                                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                                  </ActivityAction.Argument>
-                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,228" sap2010:WorkflowViewState.IdRef="Sequence_80">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="LogHandling - Invoke Workflow File (Framework\Log Handling\LogHandling.xaml)" sap:VirtualizedContainerService.HintSize="450,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\Log Handling\LogHandling.xaml">
-                                      <ui:InvokeWorkflowFile.Arguments>
-                                        <InArgument x:TypeArguments="x:String" x:Key="in_LogMessage">[exception.Message.toString]</InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="in_LogLevel">error</InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="FileName">[FileName]</InArgument>
-                                      </ui:InvokeWorkflowFile.Arguments>
-                                    </ui:InvokeWorkflowFile>
-                                  </Sequence>
-                                </ActivityAction>
-                              </Catch>
-                            </TryCatch.Catches>
-                            <TryCatch.Finally>
-                              <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="484,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_79">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </Sequence>
-                            </TryCatch.Finally>
-                          </TryCatch>
-                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge ACME System 1(2)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486,587.3333333333334" sap2010:WorkflowViewState.IdRef="NApplicationCard_23" InteractionMode="DebuggerApi" ScopeGuid="b36fbed1-e38d-4525-a084-f11656aa2b3e" Version="V2">
-                            <uix:NApplicationCard.Body>
-                              <ActivityAction x:TypeArguments="x:Object">
-                                <ActivityAction.Argument>
-                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-                                </ActivityAction.Argument>
-                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,342.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_72">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Add Comments'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57.333333333333336" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="b36fbed1-e38d-4525-a084-f11656aa2b3e" Text="[sha_code]" Version="V4">
-                                    <uix:NTypeInto.Target>
-                                      <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/work-items/update/105620931" CVScreenId="c7da44e7-1f71-482e-ac0f-3dcbecdc8a02" ContentHash="uagHN7KPoUmJEZY9GQBFFA" CvElementArea="141, 578, 1632, 85" CvType="InputBox" DesignTimeRectangle="151, 581, 1618, 80" DesignTimeScaleFactor="1.5" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='newComment' tag='TEXTAREA' type='text' class='form-control' aaname='' /&gt;" Guid="8ecfe484-d877-4f37-83ab-870afd32a911" InformativeScreenshot="7e17ac6e26846986a07f979833e906b8.png" IsResponsive="True" Reference="HFJFrCTOQka7zKhle0Z_YQ/jVendYn0uUWTnFc-Hs69hg" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
-                                        <uix:TargetAnchorable.Anchors>
-                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                            <uix:Target CVScreenId="c7da44e7-1f71-482e-ac0f-3dcbecdc8a02" CvTextArea="147, 548, 165, 19" CvTextArgument="Add Comments:" CvType="Text" DesignTimeRectangle="151, 543, 162, 30" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Add Comments:' check:innerText='Add Comments:' /&gt;" Guid="8fa3889d-ab91-420c-8828-b22fd8b9cfb7" SearchSteps="FuzzySelector, CV" />
-                                          </scg:List>
-                                        </uix:TargetAnchorable.Anchors>
-                                      </uix:TargetAnchorable>
-                                    </uix:NTypeInto.Target>
-                                    <uix:NTypeInto.VerifyOptions>
-                                      <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
-                                        <uix:VerifyExecutionTypeIntoOptions.Retry>
-                                          <InArgument x:TypeArguments="x:Boolean" />
-                                        </uix:VerifyExecutionTypeIntoOptions.Retry>
-                                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
-                                          <InArgument x:TypeArguments="x:Double" />
-                                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
-                                      </uix:VerifyExecutionTypeIntoOptions>
-                                    </uix:NTypeInto.VerifyOptions>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </uix:NTypeInto>
-                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '---'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57.333333333333336" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b36fbed1-e38d-4525-a084-f11656aa2b3e" Version="V4">
-                                    <uix:NClick.Target>
-                                      <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/work-items/update/105620931" CVScreenId="c7da44e7-1f71-482e-ac0f-3dcbecdc8a02" ContentHash="ja22DxhmNkeBBkejW_OP_w" CvElementArea="148, 720, 334, 53" CvType="InputBox" DesignTimeRectangle="151, 721, 330, 50" DesignTimeScaleFactor="1.5" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' class='btn dropdown-toggle bs-placeholder btn-default' aaname='---' check:innerText='---' /&gt;" Guid="559f2aed-d338-4c43-90b4-79f6b83c67e2" InformativeScreenshot="e3cf8d835bec043f65aa90a2153a6d28.png" Reference="HFJFrCTOQka7zKhle0Z_YQ/gxoL57zvWESOVOJ7P94hDA" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
-                                        <uix:TargetAnchorable.Anchors>
-                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                            <uix:Target CVScreenId="c7da44e7-1f71-482e-ac0f-3dcbecdc8a02" CvTextArea="149, 687, 121, 19" CvTextArgument="New Status:" CvType="Text" DesignTimeRectangle="151, 683, 120, 30" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='New Status:' tag='LABEL' type='' class='' check:innerText='New Status:' /&gt;" Guid="f67157cf-9fbf-4449-859b-dad188df7cb3" SearchSteps="FuzzySelector, CV" />
-                                          </scg:List>
-                                        </uix:TargetAnchorable.Anchors>
-                                      </uix:TargetAnchorable>
-                                    </uix:NClick.Target>
-                                    <uix:NClick.VerifyOptions>
-                                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                                        <uix:VerifyExecutionOptions.Retry>
-                                          <InArgument x:TypeArguments="x:Boolean" />
-                                        </uix:VerifyExecutionOptions.Retry>
-                                        <uix:VerifyExecutionOptions.Timeout>
-                                          <InArgument x:TypeArguments="x:Double" />
-                                        </uix:VerifyExecutionOptions.Timeout>
-                                      </uix:VerifyExecutionOptions>
-                                    </uix:NClick.VerifyOptions>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </uix:NClick>
-                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Completed'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57.333333333333336" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b36fbed1-e38d-4525-a084-f11656aa2b3e" Version="V4">
-                                    <uix:NClick.Target>
-                                      <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/work-items/update/105620931" CVScreenId="aa540d2b-90c6-4bac-9b7f-a568f6261275" ContentHash="jJTyeY-77kK5SXemb1-26Q" CvTextArea="109, 780, 103, 22" CvTextArgument="Completed" CvType="Text" DesignTimeRectangle="81, 771, 328, 39" DesignTimeScaleFactor="1.5" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Completed' tag='A' type='' class='' check:innerText='Completed' /&gt;" Guid="24a12403-7a5a-4b26-83e5-0e5b6445ac3e" InformativeScreenshot="75cbf7a45f1a837c15f7b119139a4f09.png" Reference="HFJFrCTOQka7zKhle0Z_YQ/aDNmgKc1P0-sJ2euu-XvFg" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
-                                        <uix:TargetAnchorable.Anchors>
-                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                            <uix:Target CVScreenId="aa540d2b-90c6-4bac-9b7f-a568f6261275" CvElementArea="82, 654, 325, 36" CvType="InputBox" DesignTimeRectangle="81, 654, 328, 39" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='A' type='' class='' aaname='---' check:innerText='---' /&gt;" Guid="d85bbb9f-cb3a-4228-801e-d0ab59f164a2" SearchSteps="FuzzySelector, CV" />
-                                          </scg:List>
-                                        </uix:TargetAnchorable.Anchors>
-                                      </uix:TargetAnchorable>
-                                    </uix:NClick.Target>
-                                    <uix:NClick.VerifyOptions>
-                                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                                        <uix:VerifyExecutionOptions.Retry>
-                                          <InArgument x:TypeArguments="x:Boolean" />
-                                        </uix:VerifyExecutionOptions.Retry>
-                                        <uix:VerifyExecutionOptions.Timeout>
-                                          <InArgument x:TypeArguments="x:Double" />
-                                        </uix:VerifyExecutionOptions.Timeout>
-                                      </uix:VerifyExecutionOptions>
-                                    </uix:NClick.VerifyOptions>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </uix:NClick>
-                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Update Work Item'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57.333333333333336" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b36fbed1-e38d-4525-a084-f11656aa2b3e" Version="V4">
-                                    <uix:NClick.Target>
-                                      <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/work-items/update/105620931" CVScreenId="24c84bfc-7e48-4820-990d-78dc26f35064" ContentHash="k8mctnDbxUmMGaeeqWOTyw" CvElementArea="148, 791, 239, 54" CvTextArea="195, 809, 170, 22" CvTextArgument="Update Work Item" CvType="Button" DesignTimeRectangle="151, 793, 233, 50" DesignTimeScaleFactor="1.5" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='buttonUpdate' tag='BUTTON' type='button' class='btn btn-default' aaname=' Update Work Item' check:innerText='Update Work Item' /&gt;" Guid="2a9f19e4-232e-4dd9-9965-e5333795012d" InformativeScreenshot="d4b362b3d7b722c44b44a0341d02a768.png" Reference="HFJFrCTOQka7zKhle0Z_YQ/oZS5W5lBkUeUK_T02S1OvQ" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
-                                        <uix:TargetAnchorable.PointOffset>
-                                          <uix:PointOffset X="3" Y="3" />
-                                        </uix:TargetAnchorable.PointOffset>
-                                      </uix:TargetAnchorable>
-                                    </uix:NClick.Target>
-                                    <uix:NClick.VerifyOptions>
-                                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                                        <uix:VerifyExecutionOptions.Retry>
-                                          <InArgument x:TypeArguments="x:Boolean" />
-                                        </uix:VerifyExecutionOptions.Retry>
-                                        <uix:VerifyExecutionOptions.Timeout>
-                                          <InArgument x:TypeArguments="x:Double" />
-                                        </uix:VerifyExecutionOptions.Timeout>
-                                      </uix:VerifyExecutionOptions>
-                                    </uix:NClick.VerifyOptions>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </uix:NClick>
-                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,50.666666666666664" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b36fbed1-e38d-4525-a084-f11656aa2b3e" Version="V4">
-                                    <uix:NClick.Target>
-                                      <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/work-items/105620931" CVScreenId="212d5ee5-6cdf-4fa3-a334-e0db7084c880" ContentHash="UlTjC_FxJEG0hS6fOwgRhA" CvElementArea="1187, 205, 96, 46" CvTextArea="1218, 218, 28, 18" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="1187, 204, 96, 48" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' automationid='' check:fulltext='OK' /&gt;" Guid="762464fc-54ab-4c78-826b-715db6f50082" InformativeScreenshot="502a14a1a07631eb2bbbb0cda491bfff.png" Reference="HFJFrCTOQka7zKhle0Z_YQ/6Iw3RGpBNkqfO2m4gClxuw" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Work - Microsoft​ Edge' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive" />
-                                    </uix:NClick.Target>
-                                    <uix:NClick.VerifyOptions>
-                                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                                        <uix:VerifyExecutionOptions.Retry>
-                                          <InArgument x:TypeArguments="x:Boolean" />
-                                        </uix:VerifyExecutionOptions.Retry>
-                                        <uix:VerifyExecutionOptions.Timeout>
-                                          <InArgument x:TypeArguments="x:Double" />
-                                        </uix:VerifyExecutionOptions.Timeout>
-                                      </uix:VerifyExecutionOptions>
-                                    </uix:NClick.VerifyOptions>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </uix:NClick>
-                                </Sequence>
-                              </ActivityAction>
-                            </uix:NApplicationCard.Body>
-                            <uix:NApplicationCard.TargetApp>
-                              <uix:TargetApp Area="0, 0, 698, 1005" BrowserType="Edge" ContentHash="ZQNKX6zLT02XjHhMntXXSA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAELSURBVDhPpZMBDcJADEWnAANgAAxgAOxgAASAATAABkAAGAADmOG/7v6lLLeEhJ+85Na0f21v6xpaiq24i3fhKg5iJkY1ERS+BAUPMS1wdoycpvwWjFxs0dVTENsJcsmrwtXOa3Hpj186C4wQL6qdMBdzEtgIEoFzhhhv5kwX1IQhbuBEdpCfDUWM4eeTiC5wnXMowuBrviJiGFhebrSSNXzOaub+bcAHkz+QX0dYCMaP5RyFl4OBbyTDYvMSvfy4ClpxEa5j1+g4udTUj40uwk3CkMShiK36YxjEFVrMx5sJ4soY/uoQO+LKyNuLmL0lOsk/DoUuJub9tJZcRQeMcxPMCRhQmLuSuu4DxhFTUDOzJRUAAAAASUVORK5CYII=" InformativeScreenshot="260db726ac29b61845eee124f2996aa6.jpg" Reference="HFJFrCTOQka7zKhle0Z_YQ/EhFdMdPXAEiiT-gXNSfiHQ" Selector="&lt;html app='msedge.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;" Url="[&quot;https://acme-test.uipath.com/work-items/update/&quot; + wwid.ToString]" Version="V2" />
-                            </uix:NApplicationCard.TargetApp>
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                          </uix:NApplicationCard>
-                        </Sequence>
-                      </Sequence>
-                    </ActivityAction>
-                  </uix:NApplicationCard.Body>
-                  <uix:NApplicationCard.TargetApp>
-                    <uix:TargetApp Area="0, 0, 698, 1005" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAELSURBVDhPpZMBDcJADEWnAANgAAxgAOxgAASAATAABkAAGAADmOG/7v6lLLeEhJ+85Na0f21v6xpaiq24i3fhKg5iJkY1ERS+BAUPMS1wdoycpvwWjFxs0dVTENsJcsmrwtXOa3Hpj186C4wQL6qdMBdzEtgIEoFzhhhv5kwX1IQhbuBEdpCfDUWM4eeTiC5wnXMowuBrviJiGFhebrSSNXzOaub+bcAHkz+QX0dYCMaP5RyFl4OBbyTDYvMSvfy4ClpxEa5j1+g4udTUj40uwk3CkMShiK36YxjEFVrMx5sJ4soY/uoQO+LKyNuLmL0lOsk/DoUuJub9tJZcRQeMcxPMCRhQmLuSuu4DxhFTUDOzJRUAAAAASUVORK5CYII=" sap2010:WorkflowViewState.IdRef="TargetApp_1" InformativeScreenshot="d903e6aa906c752ba4861892ea64ce43.jpg" Selector="&lt;html app='msedge.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;" Url="[&quot;https://acme-test.uipath.com/work-items/&quot; + wwid.ToString]" Version="V2" />
-                  </uix:NApplicationCard.TargetApp>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </uix:NApplicationCard>
-              </TryCatch.Try>
-              <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_6">
-                  <ActivityAction x:TypeArguments="s:Exception">
-                    <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                    </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="588,228" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                            </Sequence>
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp Area="0, 0, 698, 1005" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAELSURBVDhPpZMBDcJADEWnAANgAAxgAOxgAASAATAABkAAGAADmOG/7v6lLLeEhJ+85Na0f21v6xpaiq24i3fhKg5iJkY1ERS+BAUPMS1wdoycpvwWjFxs0dVTENsJcsmrwtXOa3Hpj186C4wQL6qdMBdzEtgIEoFzhhhv5kwX1IQhbuBEdpCfDUWM4eeTiC5wnXMowuBrviJiGFhebrSSNXzOaub+bcAHkz+QX0dYCMaP5RyFl4OBbyTDYvMSvfy4ClpxEa5j1+g4udTUj40uwk3CkMShiK36YxjEFVrMx5sJ4soY/uoQO+LKyNuLmL0lOsk/DoUuJub9tJZcRQeMcxPMCRhQmLuSuu4DxhFTUDOzJRUAAAAASUVORK5CYII=" sap2010:WorkflowViewState.IdRef="TargetApp_1" InformativeScreenshot="d903e6aa906c752ba4861892ea64ce43.jpg" Selector="&lt;html app='msedge.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;" Url="[currentDataRow(&quot;Actions Url&quot;).ToString]" Version="V2" />
+                      </uix:NApplicationCard.TargetApp>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="LogHandling - Invoke Workflow File (Framework\Log Handling\LogHandling.xaml)" sap:VirtualizedContainerService.HintSize="554,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\Log Handling\LogHandling.xaml">
-                        <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_LogMessage">[exception.Message.toString]</InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_LogLevel">error</InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="FileName">[FileName]</InArgument>
-                        </ui:InvokeWorkflowFile.Arguments>
-                      </ui:InvokeWorkflowFile>
+                    </uix:NApplicationCard>
+                  </TryCatch.Try>
+                  <TryCatch.Catches>
+                    <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_6">
+                      <ActivityAction x:TypeArguments="s:Exception">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="588,108" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="LogHandling - Invoke Workflow File (Framework\Log Handling\LogHandling.xaml)" sap:VirtualizedContainerService.HintSize="554,48" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\Log Handling\LogHandling.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_LogMessage">[exception.Message.toString]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_LogLevel">error</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="FileName">[FileName]</InArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                          </ui:InvokeWorkflowFile>
+                        </Sequence>
+                      </ActivityAction>
+                    </Catch>
+                  </TryCatch.Catches>
+                  <TryCatch.Finally>
+                    <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Finally" sap:VirtualizedContainerService.HintSize="588,56" sap2010:WorkflowViewState.IdRef="Sequence_78">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="sd:DataTable" Name="newDataTable" />
+                        <Variable x:TypeArguments="sd:DataRow" Name="newDataRow" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </Sequence>
-                  </ActivityAction>
-                </Catch>
-              </TryCatch.Catches>
-              <TryCatch.Finally>
-                <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="588,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_78">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </Sequence>
-              </TryCatch.Finally>
-            </TryCatch>
-          </Sequence>
-        </ActivityAction>
-      </ui:ForEach.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:ForEach>
+                  </TryCatch.Finally>
+                </TryCatch>
+              </Sequence>
+            </ActivityAction>
+          </ui:ForEach.Body>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:ForEach>
+      </TryCatch.Try>
+    </TryCatch>
   </Sequence>
 </Activity>
